@@ -67,7 +67,7 @@ git clone https://github.com/Guemann-ui/DETSlideNet.git
 cd DETSlideNet
 ```
 
-C. Data Download & Organization
+### C. Data Download & Organization
 Download the dataset from Zenodo.
 
 Extract under data/:
@@ -80,7 +80,7 @@ data/
     ├── images/
     └── labels/
 ```
-D. 1. Local Setup (Without Docker)
+### D. 1. Local Setup (Without Docker)
 
 # 1. Create & activate virtual env
 ```
@@ -113,7 +113,7 @@ python main.py \
   --load checkpoints/run1/model_best.pth \
   --img_size 128
 ```
-D. 2. Docker Setup
+### D. 2. Docker Setup
 
 # 1. Build Docker image
 docker build -t detslidenet:latest .
@@ -141,8 +141,7 @@ docker run --gpus all \
 ```
 docker-compose up --build
 ```
-E. Quick Commands
-Command	Description
+### E. Quick Commands
 ```
 python main.py -m train	Train with default settings
 python main.py -m test -f <ckpt>	Evaluate saved checkpoint
