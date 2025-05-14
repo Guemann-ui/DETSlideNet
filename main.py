@@ -51,7 +51,7 @@ if __name__ == '__main__':
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     logger.info(f'Using device: {device}')
 
-    base_root = './data/data/'
+    base_root = './data/'
     data_path = os.path.join(base_root, args.mode)
     regions = args.region.split(',')
 
