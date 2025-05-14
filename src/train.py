@@ -119,7 +119,7 @@ def train_net(
         # 7) Checkpoint best
         if avg_val_loss < best_val_loss:
             best_val_loss = avg_val_loss
-            torch.save(net.state_dict(), os.path.join(checkpoint_dir, "best.pth"))
+            torch.save(net.state_dict(), os.path.join(checkpoint_dir, "model_best.pth"))
             logger.info(f"New best model (Val Loss={best_val_loss:.4f})")
 
         scheduler.step()
