@@ -44,7 +44,7 @@
 ├── requirements.txt
 ├── CODE_OF_CONDUCT.md
 └── CONTRIBUTING.md
-
+```
 
 ## ⚙️ Installation & Usage
 
