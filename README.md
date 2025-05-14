@@ -74,11 +74,26 @@ Extract under data/:
 ```
 data/
 ├── train/
-│   ├── images/
-│   └── labels/
+│   ├── Moxitaidi/
+│   │   ├── images/
+│   │   └── labels/
+│   ├── TiburonPeninsula/
+│   │   ├── images/
+│   │   └── labels/
+│   └── Jiuzhaivalley/
+│       ├── images/
+│       └── labels/
 └── test/
-    ├── images/
-    └── labels/
+    ├── Moxitaidi/
+    │   ├── images/
+    │   └── labels/
+    ├── TiburonPeninsula/
+    │   ├── images/
+    │   └── labels/
+    └── Jiuzhaivalley/
+        ├── images/
+        └── labels/
+
 ```
 ### D. 1. Local Setup (Without Docker)
 
