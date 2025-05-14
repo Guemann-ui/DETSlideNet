@@ -82,18 +82,18 @@ data/
 ```
 ### D. 1. Local Setup (Without Docker)
 
-# 1. Create & activate virtual env
+#### 1. Create & activate virtual env
 ```
 python3 -m venv .venv
 source .venv/bin/activate    # macOS/Linux
 .venv\Scripts\activate       # Windows PowerShell
 ```
-# 2. Install dependencies
+#### 2. Install dependencies
 ```
 pip install --upgrade pip
 pip install -r requirements.txt
 ```
-# 3. Train
+#### 3. Train
 ```
 python main.py \
   --mode train \
@@ -105,7 +105,7 @@ python main.py \
   --img_size 128 \
   --output-dir checkpoints/run1
 ```
-# 4. Evaluate
+#### 4. Evaluate
 ```
 python main.py \
   --mode test \
@@ -115,10 +115,10 @@ python main.py \
 ```
 ### D. 2. Docker Setup
 
-# 1. Build Docker image
+#### 1. Build Docker image
 docker build -t detslidenet:latest .
 
-# 2. Train in container
+#### 2. Train in container
 
 ```
 docker run --gpus all \
@@ -128,7 +128,7 @@ docker run --gpus all \
   python main.py --mode train --output-dir checkpoints/run1
 ```
 
-# 3. Evaluate in container
+#### 3. Evaluate in container
 ```
 docker run --gpus all \
   -v $(pwd)/data:/app/data \
@@ -137,7 +137,7 @@ docker run --gpus all \
   detslidenet:latest \
   python main.py --mode test --load checkpoints/run1/model_best.pth
 ```
-# 4. (Optional) Docker Compose
+#### 4. (Optional) Docker Compose
 ```
 docker-compose up --build
 ```
