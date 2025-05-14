@@ -116,8 +116,9 @@ python main.py \
 ### D. 2. Docker Setup
 
 #### 1. Build Docker image
+```
 docker build -t detslidenet:latest .
-
+```
 #### 2. Train in container
 
 ```
