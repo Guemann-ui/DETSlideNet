@@ -31,9 +31,10 @@ jobs:
           pip install -r requirements.txt
           pip install pytest flake8
 
-      - name: Run evaluation script
+      - name: Run evaluation script (PowerShell)
+        shell: pwsh
         run: |
-          python src/test.py \
-            --weights checkpoints/model_best.pth \
-            --data-dir data/test/ \
+          python src/test.py `
+            --weights checkpoints/model_best.pth `
+            --data-dir data/test/ `
             --output results/
