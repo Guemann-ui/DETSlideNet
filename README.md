@@ -34,16 +34,9 @@
 │   └── utils/
 │       ├── losses.py
 │       └── module.py
-├── tests/                 # unit & integration tests
-│   ├── test_dataloader.py
-│   ├── test_nets.py
-│   └── test_train_eval.py
 ├── .gitignore
-├── LICENSE
-├── README.md
 ├── requirements.txt
-├── CODE_OF_CONDUCT.md
-└── CONTRIBUTING.md
+└── README.md
 ```
 
 ## ⚙️ Installation & Usage
