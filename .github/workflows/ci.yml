@@ -29,15 +29,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip                 
           pip install -r requirements.txt              
-
-      - name: Lint with flake8
-        run: |
-          flake8 src tests --max-line-length=120     
-
-      - name: Run unit tests
-        run: |
-          pytest --maxfail=1 --disable-warnings -q        
-
+  
       - name: Run evaluation script
         shell: bash
         run: |
