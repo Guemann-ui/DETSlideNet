@@ -33,10 +33,10 @@
 │   ├── test.py            # eval_net
 │   └── utils/
 │       ├── losses.py
-│       └── module.py 
+│       └── module.py
+├──  Dockerfile
 ├── .gitignore
 ├── .gitattributes
-├── Dockerfile
 ├── requirements.txt
 └── README.md
 ```
