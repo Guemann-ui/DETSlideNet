@@ -75,24 +75,24 @@ Extract under data/:
 data/
 ├── train/
 │   ├── Moxitaidi/
-│   │   ├── images/
-│   │   └── labels/
+│   │   ├── img/
+│   │   └── label/
 │   ├── TiburonPeninsula/
-│   │   ├── images/
-│   │   └── labels/
+│   │   ├── img/
+│   │   └── label/
 │   └── Jiuzhaivalley/
-│       ├── images/
-│       └── labels/
+│       ├── img/
+│       └── label/
 └── test/
     ├── Moxitaidi/
-    │   ├── images/
-    │   └── labels/
+    │   ├── img/
+    │   └── label/
     ├── TiburonPeninsula/
-    │   ├── images/
-    │   └── labels/
+    │   ├── img/
+    │   └── label/
     └── Jiuzhaivalley/
-        ├── images/
-        └── labels/
+        ├── img/
+        └── label/
 
 ```
 ### D. 1. Local Setup (Without Docker)
