@@ -9,18 +9,17 @@ on:
     branches: [ main, master ]
 
 jobs:
-  test-script:
-    name: Install & Run test.py
+  build-test:
     runs-on: ubuntu-latest
     strategy:
       matrix:
         python-version: [3.8, 3.9, 3.10]
 
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Set up Python ${{ matrix.python-version }}
+      - name: Setup Python ${{ matrix.python-version }}
         uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
@@ -29,10 +28,18 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+          pip install pytest flake8
+
+      - name: Lint with flake8
+        run: |
+          flake8 src tests --max-line-length=120
+
+      - name: Run unit tests
+        run: |
+          pytest --maxfail=1 --disable-warnings -q
 
       - name: Run evaluation script
         run: |
-          # You can adjust the --load and --data-dir paths as needed.
           python src/test.py \
             --weights checkpoints/model_best.pth \
             --data-dir data/test/ \
