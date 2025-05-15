@@ -68,7 +68,7 @@ cd DETSlideNet
 ```
 
 ### C. Data Download & Organization
-Download the dataset from (Zenodo)[https://zenodo.org/records/10294997].
+Download the dataset from [Zenodo](https://zenodo.org/records/10294997).
 
 Extract under data/:
 ```
