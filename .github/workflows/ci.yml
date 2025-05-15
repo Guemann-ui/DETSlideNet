@@ -38,7 +38,7 @@ jobs:
             --epochs 1 \
             --batch-size 2 \
             --learning-rate 0.001 \
-            --region Moxitaidi \
+            --region Moxitown \
             --img_size 64 \
             --sat-weight 0.4
             
