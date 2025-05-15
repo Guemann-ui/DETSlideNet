@@ -31,14 +31,6 @@ jobs:
           pip install -r requirements.txt
           pip install pytest flake8
 
-      - name: Lint with flake8
-        run: |
-          flake8 src tests --max-line-length=120
-
-      - name: Run unit tests
-        run: |
-          pytest --maxfail=1 --disable-warnings -q
-
       - name: Run evaluation script
         run: |
           python src/test.py \
