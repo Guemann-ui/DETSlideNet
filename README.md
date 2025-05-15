@@ -125,7 +125,7 @@ python main.py \
 python main.py \
   --mode test \
   --region Moxitaidi,TiburonPeninsula,Jiuzhaivalley \
-  --load checkpoints/run1/model_best.pth \
+  --load checkpoints/model_best.pth \
   --img_size 128
 ```
 ### D. 2. Docker Setup
@@ -135,7 +135,15 @@ python main.py \
 docker build -t detslidenet:latest .
 ```
 #### 2. Train in container
-
+PowerShell / Windows:
+```
+docker run --rm \
+  --mount type=bind,source="$(pwd)/data",target=/app/data \
+  --mount type=bind,source="$(pwd)/checkpoints",target=/app/checkpoints \
+  detslidenet:latest \
+  --mode train --epochs 100 --batch-size 4 --region Moxitaidi --img_size 128
+```
+Bash / Linux / macOS:
 ```
 docker run --gpus all \
   -v $(pwd)/data:/app/data \
@@ -145,6 +153,17 @@ docker run --gpus all \
 ```
 
 #### 3. Evaluate in container
+PowerShell / Windows:
+```
+docker run --rm `
+  --mount type=bind,source="$($pwd.Path)\data\data",target=/app/data/data `
+  detslidenet:latest `
+  --mode test `
+  --region Moxitaidi,TiburonPeninsula,Jiuzhaivalley `
+  --load checkpoints/model_best.pth `
+  --img_size 128
+```
+Bash / Linux / macOS:
 ```
 docker run --gpus all \
   -v $(pwd)/data:/app/data \
